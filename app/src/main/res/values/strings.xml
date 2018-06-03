@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">OmikujiApp</string>
+    <string name="resutl_text">...</string>
+    <string name="button_text">今日の運勢は？</string>
+</resources>
