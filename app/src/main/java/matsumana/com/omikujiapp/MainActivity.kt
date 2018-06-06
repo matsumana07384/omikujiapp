@@ -7,6 +7,9 @@ import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
+import android.widget.ImageView
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,12 +26,20 @@ class MainActivity : AppCompatActivity() {
 //            val n = Random().nextInt(10 )
             val n = Random().nextInt(results.count())
 
-            if(n == 0){
+            val omikujiImage = findViewById<View>(R.id.resultOmikuji) as ImageView
+
+
+            if (results[n] === "大吉" ){
 //                resultTextView.setTextColor(Color.RED)
 //                resultTextView.setTextColor(Color.parseColor("#ff0000"))
+//                ↑でも同じ色を出すことができる
                 resultTextView.setTextColor(Color.argb(255,255,0,0))
+                //おみくじを変える
+                omikujiImage.setImageResource(R.drawable.omikuji_daikichi)
+
             }else{
                 resultTextView.setTextColor(Color.parseColor("#808080"))
+                omikujiImage.setImageResource(R.drawable.omikuji)
             }
 
 //            resultTextView.text = n.toString()
@@ -36,3 +47,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+
