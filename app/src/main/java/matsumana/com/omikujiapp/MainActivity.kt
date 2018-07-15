@@ -1,5 +1,6 @@
 package matsumana.com.omikujiapp
 
+import android.content.ClipData
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
 //            outPutOmikuji(omikuji = results[n])
 
 
+
             when(results[n]){
 
                 OmikujiResults.大吉 -> omikujiImage.setImageResource(R.drawable.omikuji_daikichi)
@@ -55,7 +57,7 @@ class MainActivity : AppCompatActivity() {
 
             }
 
-//            resultTextView.text = results[n].toString()
+            resultTextView.text = results[n].comments
 
 
 //            if (results[n] === OmikujiResults.大吉 ){
@@ -79,7 +81,7 @@ class MainActivity : AppCompatActivity() {
 
 //            resultTextView.text = n.toString()
 //            resultTextView.text = results.get(n)
-            resultTextView.text = results.get(n).toString()
+//            resultTextView.text = results.get(n).toString()
         }
     }
   }
