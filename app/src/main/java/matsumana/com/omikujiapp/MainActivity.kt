@@ -1,15 +1,11 @@
 package matsumana.com.omikujiapp
 
-import android.content.ClipData
-import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.support.v7.app.AppCompatActivity
 import android.view.View
+import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
-import android.widget.ImageView
-
 
 
 class MainActivity : AppCompatActivity() {
