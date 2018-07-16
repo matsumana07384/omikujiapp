@@ -36,8 +36,6 @@ class MainActivity : AppCompatActivity() {
             //インスタンス化
 //            outPutOmikuji(omikuji = results[n])
 
-
-
             when(results[n]){
 
                 OmikujiResults.大吉 -> omikujiImage.setImageResource(R.drawable.omikuji_daikichi)
@@ -54,10 +52,17 @@ class MainActivity : AppCompatActivity() {
 
                 OmikujiResults.大凶 -> omikujiImage.setImageResource(R.drawable.omikuji_daikyou)
 
-
             }
 
             resultTextView.text = results[n].comments
+
+            val notification: MyNotification = MyNotification(
+                    this,
+                    this.javaClass
+            )
+            notification.title = results[n].name
+            notification.text = results[n].comments
+            notification.run()
 
 
 //            if (results[n] === OmikujiResults.大吉 ){
